@@ -1,0 +1,18 @@
+
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+
+.trash {
+  background: url('img/trash.svg');
+  border: 0;
+  display: block;
+  height: _the_image_height;
+  width: _the_image_width;
+}

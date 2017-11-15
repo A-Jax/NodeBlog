@@ -1,0 +1,43 @@
+ {{> _navbar}}
+<br>
+<br>
+<div class="container">
+  {{#each blogs}}
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{title}}</h2>
+        <h6 class="card-text">{{{details}}}</h6>
+        <br>
+        <div class="row">
+          <div class="col-md-10">
+            <p class="card-subtitle mb-2 text-muted">{{date}}</p>
+          </div>
+         
+          <div class="col-md-2">
+            <ul>
+              <li>
+                <a href="/blogs/edit/{{id}}">
+                  <img src="/img/pencil.svg">
+                </a>
+              </li>
+              <li>
+                <form method="post" action="/blogs/{{id}}?_method=DELETE">
+                  <input type="hidden" name="_method" value="DELETE">
+
+                  <button class="trash" type="submit">
+                    <img src="/img/trash.svg">
+                  </button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  {{else}}
+  <p>No blogs listed</p>
+  {{/each}}
+</div>

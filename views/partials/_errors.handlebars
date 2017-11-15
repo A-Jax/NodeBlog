@@ -1,0 +1,10 @@
+{{#if error}} <!-- passport outputs a variable error, not an errors array like below -->
+  <div class="alert alert-danger">{{error}}</div>
+{{/if}}
+
+
+{{#each errors}}
+  <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
